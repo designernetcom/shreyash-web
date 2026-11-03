@@ -1,0 +1,472 @@
+
+/* =====================================
+   AWARDS & ACCOLADES
+===================================== */
+
+.sem-awards-page {
+    --aw-primary: #04a587;
+    --aw-primary-dark: #018a71;
+    --aw-text: #000;
+    --aw-muted: #647481;
+    --aw-border: #e1ebed;
+    --aw-light: #f4f9fa;
+
+    color: var(--aw-text);
+    font-family: inherit;
+    overflow: hidden;
+}
+
+.sem-awards-page *,
+.sem-awards-page *::before,
+.sem-awards-page *::after {
+    box-sizing: border-box;
+}
+
+.sem-awards-container {
+    width: min(1160px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+/* Breadcrumb */
+
+.sem-awards-breadcrumb {
+    padding: 55px 0 45px;
+    background: linear-gradient(115deg, #f2f9fa, #ffffff 75%);
+    border-bottom: 1px solid #e7eff1;
+}
+
+.sem-awards-breadcrumb .sem-awards-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 25px;
+}
+
+.sem-awards-eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--aw-primary);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+.sem-awards-breadcrumb h1 {
+    margin: 0;
+    color: var(--aw-text);
+    font-size: clamp(30px, 4vw, 46px);
+    font-weight: 750;
+    letter-spacing: -1.2px;
+    line-height: 1.2;
+}
+
+.sem-awards-crumbs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: var(--aw-muted);
+    font-size: 13px;
+}
+
+.sem-awards-crumbs a {
+    color: var(--aw-primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.sem-awards-crumbs a:hover {
+    color: var(--aw-primary-dark);
+    text-decoration: underline;
+}
+
+/* Section headings */
+
+.sem-awards-section-heading {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.sem-awards-section-heading .sem-awards-eyebrow {
+    margin-bottom: 8px;
+}
+
+.sem-awards-section-heading h1 {
+    margin: 0;
+    color: var(--aw-text);
+    font-size: clamp(52px, 4vw, 62px);
+    font-weight: 300;
+    letter-spacing: -1.2px;
+    line-height: 1.2;
+}
+
+.sem-awards-section-heading h2 {
+    margin: 0 0 14px;
+    color: var(--aw-text);
+    font-size: clamp(52px, 3.3vw, 62px);
+    font-weight: 300;
+    letter-spacing: -1px;
+    line-height: 1.25;
+}
+
+.sem-awards-section-heading p {
+    margin: 0;
+    color: var(--aw-muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Featured awards */
+
+.sem-awards-featured {
+    padding: 65px 0 45px;
+    background: #fff;
+}
+
+.sem-awards-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+}
+
+.sem-award-card {
+    min-width: 0;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--aw-border);
+    border-radius: 12px;
+    box-shadow: 0 8px 28px rgba(18, 55, 68, 0.06);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.sem-award-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 36px rgba(18, 55, 68, 0.12);
+}
+
+.sem-award-card-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 235px; */
+    /* padding: 20px; */
+    background: var(--aw-light);
+    border-bottom: 1px solid #e5edef;
+}
+
+.sem-award-card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.sem-award-number {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    background: var(--aw-primary);
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.sem-award-card-content {
+    padding: 24px 24px 26px;
+}
+
+.sem-award-label {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--aw-primary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+.sem-award-card h3,
+.sem-award-timeline-copy h3 {
+    margin: 0 0 10px;
+    color: var(--aw-text);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.sem-award-card p,
+.sem-award-timeline-copy p {
+    margin: 0;
+    color: var(--aw-muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.sem-award-date {
+    display: inline-block;
+    margin-top: 16px;
+    padding-top: 13px;
+    border-top: 1px solid #e1ebed;
+    color: #75858e;
+    font-size: 12px;
+    font-weight: 650;
+}
+
+/* Timeline section */
+
+.sem-awards-timeline-section {
+    padding: 76px 0 88px;
+    background: var(--aw-light);
+}
+
+.sem-awards-timeline-section .sem-awards-section-heading {
+    margin-bottom: 48px;
+}
+
+.sem-awards-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sem-awards-timeline::before {
+    position: absolute;
+    top: 18px;
+    bottom: 18px;
+    left: 94px;
+    width: 2px;
+    background: #cfe1e4;
+    content: "";
+}
+
+.sem-award-timeline-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 70px 150px minmax(0, 1fr);
+    align-items: center;
+    gap: 150px;
+    margin-bottom: 20px;
+    padding: 22px 26px;
+    background: #fff;
+    border: 1px solid var(--aw-border);
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(18, 55, 68, 0.035);
+}
+
+.sem-award-timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.sem-award-year {
+    position: relative;
+    z-index: 1;
+    color: var(--aw-primary);
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.sem-award-year::after {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    width: 10px;
+    height: 10px;
+    background: var(--aw-primary);
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #b8d9dd;
+    content: "";
+    transform: translate(50%, -50%);
+}
+
+.sem-award-timeline-image {
+    display: grid;
+    place-items: center;
+    height: 105px;
+    padding: 8px;
+    background: #f7fafb;
+    border-radius: 7px;
+}
+
+.sem-award-timeline-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.sem-award-timeline-copy {
+    min-width: 0;
+    padding: 4px 0;
+}
+
+.sem-award-timeline-copy h3 {
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.sem-award-timeline-copy .sem-award-label {
+    margin-bottom: 6px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .sem-awards-feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sem-award-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .sem-award-card:last-child .sem-award-card-image {
+        height: 260px;
+    }
+
+    .sem-award-timeline-item {
+        grid-template-columns: 60px 120px minmax(0, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .sem-awards-timeline::before {
+        left: 79px;
+    }
+
+    .sem-award-year::after {
+        right: -20px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .sem-awards-container {
+        width: calc(100% - 30px);
+    }
+
+    .sem-awards-breadcrumb {
+        padding: 36px 0 30px;
+    }
+
+    .sem-awards-breadcrumb .sem-awards-container {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .sem-awards-breadcrumb h1 {
+        font-size: 32px;
+        letter-spacing: -0.7px;
+    }
+
+    .sem-awards-crumbs {
+        font-size: 12px;
+    }
+
+    .sem-awards-featured,
+    .sem-awards-timeline-section {
+        padding: 52px 0;
+    }
+
+    .sem-awards-section-heading {
+        margin-bottom: 27px;
+        text-align: left;
+    }
+
+    .sem-awards-section-heading h2 {
+        font-size: 28px;
+    }
+
+    .sem-awards-section-heading p {
+        font-size: 14px;
+    }
+
+    .sem-awards-feature-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .sem-award-card:last-child {
+        grid-column: auto;
+    }
+
+    /* .sem-award-card-image,
+    .sem-award-card:last-child .sem-award-card-image {
+        height: 220px;
+    } */
+
+    .sem-award-card-content {
+        padding: 20px;
+    }
+
+    .sem-award-card h3 {
+        font-size: 18px;
+    }
+
+    .sem-awards-timeline-section .sem-awards-section-heading {
+        margin-bottom: 28px;
+    }
+
+    .sem-awards-timeline::before {
+        left: 14px;
+        top: 12px;
+        bottom: 12px;
+    }
+
+    .sem-award-timeline-item {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 13px;
+        margin-left: 29px;
+        padding: 18px;
+    }
+
+    .sem-award-year {
+        padding-left: 1px;
+        font-size: 14px;
+    }
+
+    .sem-award-year::after {
+        top: 50%;
+        left: -29px;
+        right: auto;
+        width: 10px;
+        height: 10px;
+        transform: translate(-50%, -50%);
+    }
+
+    .sem-award-timeline-image {
+        height: 150px;
+    }
+
+    .sem-award-timeline-copy h3 {
+        font-size: 17px;
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .sem-award-card {
+        transition: none;
+    }
+}
+
+
+
+
+
+
